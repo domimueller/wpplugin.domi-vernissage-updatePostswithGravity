@@ -24,9 +24,8 @@ function set_gform_Configuration($entry){
     $configuration_data['insertion_hoehe'] = $entry[39];
     $configuration_data['insertion_logistics'] = $entry[55];    
     $configuration_data['insertion_price'] = $entry[38];    
-    $configuration_data['insertion_newImages'] = $entry[41];    
-    $configuration_data['insertion_titelbild'] = $entry[77];
-    $configuration_data['insertion_moreImages'] = $entry[41];
+    $configuration_data['insertion_titelbild'] = $entry[78];
+    $configuration_data['insertion_moreImages'] = $entry[80];
 
 
     $configuration_data['insertion_malgrund'] = $entry[58];
