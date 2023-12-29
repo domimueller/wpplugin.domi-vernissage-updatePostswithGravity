@@ -32,7 +32,6 @@ include $plugin_url . '/includes/gform_populate_stile_term.php';
 include $plugin_url . '/includes/gform_populate_formate_term.php';
 include $plugin_url . '/includes/gform_populate_stueckelung_term.php';
 include $plugin_url . '/includes/gform_populate_malgrund_term.php';
-include $plugin_url . '/includes/gform_populate_titelbild.php';
 include $plugin_url . '/includes/gform_after_submission.php';
 include $plugin_url . '/includes/gform_disable_post_creation.php';
 include $plugin_url . '/includes/customFunctions.php';

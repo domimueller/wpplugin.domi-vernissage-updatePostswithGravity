@@ -3,7 +3,7 @@
     /* Configuration*/
 
 
-function set_gform_Configuration($entry){
+function set_gform_Configuration_update($entry){
   
     $configuration_data = array();
 

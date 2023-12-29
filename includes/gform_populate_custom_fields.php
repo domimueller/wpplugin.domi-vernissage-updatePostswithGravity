@@ -16,7 +16,6 @@ function edit_inserat_populate_fields( $value, $field, $name  ) {
     $insertion_height = $post_meta['insertion_height'][0];
     $insertion_logistics = $post_meta['insertion_logistics'][0];
     $insertion_price = $post_meta['insertion_price'][0];
-    $insertion_sold = $post_meta['insertion_sold'][0];
 
 
     
@@ -36,7 +35,6 @@ function edit_inserat_populate_fields( $value, $field, $name  ) {
         'edit_mehrteilig'   => 'value two',
         'edit_price' => $insertion_price,
         'edit_additional_Images'   => 'value one',
-        'edit_verkauft'   => $insertion_sold,
     );
  
     return isset( $values[ $name ] ) ? $values[ $name ] : $value;}

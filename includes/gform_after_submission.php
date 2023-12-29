@@ -9,7 +9,7 @@ function set_post_content( $entry, $form ) {
     
 
     // get data from gravity forms    
-    $configuration_data = set_gform_Configuration($entry);
+    $configuration_data = set_gform_Configuration_update($entry);
     $new_post = get_post($post->id);
 
     
@@ -20,7 +20,6 @@ function set_post_content( $entry, $form ) {
     update_post_meta( $new_post->ID, 'insertion_price', $configuration_data['insertion_price'] );
     update_post_meta( $new_post->ID, 'insertion_width', $configuration_data['insertion_breite'] );
     update_post_meta( $new_post->ID, 'insertion_height', $configuration_data['insertion_hoehe'] );
-    update_post_meta( $new_post->ID, 'insertion_sold', 'verkauft' );    
     update_post_meta( $new_post->ID, 'insertion_logistics', $configuration_data['insertion_logistics'] );
           
     
