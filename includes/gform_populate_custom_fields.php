@@ -9,13 +9,48 @@ function edit_inserat_populate_fields( $value, $field, $name  ) {
 
     /* get Postmeta */
     $post_meta = get_post_meta($post->ID);
-    $insertion_desc = $post_meta['insertion_description'][0];
-    $insertion_color = $post_meta['insertion_color'][0];
-    $insertion_secondary_color = $post_meta['insertion_secondary_color'][0];
-    $insertion_width = $post_meta['insertion_width'][0];
-    $insertion_height = $post_meta['insertion_height'][0];
-    $insertion_logistics = $post_meta['insertion_logistics'][0];
-    $insertion_price = $post_meta['insertion_price'][0];
+    if (isset($post_meta['insertion_description'][0]) && !empty($post_meta['insertion_description'][0])):
+        $insertion_desc = $post_meta['insertion_description'][0];
+    else:
+        $insertion_desc = '';
+    endif; 
+
+    if (isset($post_meta['insertion_color'][0]) && !empty($post_meta['insertion_color'][0])):
+        $insertion_color = $post_meta['insertion_color'][0];
+    else:
+        $insertion_color = '';
+    endif; 
+
+    if (isset($post_meta['insertion_secondary_color'][0]) && !empty($post_meta['insertion_secondary_color'][0])):
+        $insertion_secondary_color = $post_meta['insertion_secondary_color'][0];
+    else:
+        $insertion_secondary_color = '';    
+    endif; 
+
+    if (isset($post_meta['insertion_width'][0]) && !empty($post_meta['insertion_width'][0])):
+        $insertion_width = $post_meta['insertion_width'][0];
+    else:
+        $insertion_width = '';    
+    endif; 
+
+    if (isset($post_meta['insertion_height'][0]) && !empty($post_meta['insertion_height'][0])):
+        $insertion_height = $post_meta['insertion_height'][0];
+    else:
+        $insertion_height = '';    
+    endif; 
+
+    if (isset($post_meta['insertion_logistics'][0]) && !empty($post_meta['insertion_logistics'][0])):
+        $insertion_logistics = $post_meta['insertion_logistics'][0];
+    else:
+        $insertion_logistics = '';    
+    endif; 
+
+    if (isset($post_meta['insertion_price'][0]) && !empty($post_meta['insertion_price'][0])):
+        $insertion_price = $post_meta['insertion_price'][0];
+    else:
+        $insertion_price = '';    
+    endif; 
+    
 
 
     

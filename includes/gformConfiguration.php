@@ -26,6 +26,7 @@ function set_gform_Configuration_update($entry){
     $configuration_data['insertion_price'] = $entry[38];    
     $configuration_data['insertion_titelbild'] = $entry[78];
     $configuration_data['insertion_moreImages'] = $entry[80];
+    $configuration_data['decision_newImages'] = $entry[79];
 
 
     $configuration_data['insertion_malgrund'] = $entry[58];

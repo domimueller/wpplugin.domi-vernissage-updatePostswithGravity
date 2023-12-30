@@ -63,7 +63,9 @@ function custom_deletePostAttachement($post_to_update) {
     $attachements = get_posts($args);
 
     foreach($attachements as $attachement):
+        // delete attachement of post with post type attachement.
         wp_delete_attachment($attachement->ID);
+        wp_delete_post($attachement->ID);
     endforeach;
 }
 ?>  

@@ -45,13 +45,19 @@ function set_post_content( $entry, $form ) {
     $entry_more_images =  $configuration_data['insertion_moreImages'];
     $entry_titelbild =  $configuration_data['insertion_titelbild'];
     
-    // delete the Post Attachements, if Images are beeing new set by the user
-    custom_deletePostAttachement($new_post);
+    // only update image data if user uploads new images
+    if (isset($configuration_data['decision_newImages']) && !empty($configuration_data['decision_newImages'])):
 
-    /* Call the function from wpplugin.domi-vernissage-createPostswithGravity */
-    // the fourth parameter is to define wheter the image should be set as titelbild
-    custom_create_Post_attachment($entry_titelbild, $new_post, $entry, true);
-    custom_create_Post_attachment($entry_more_images, $new_post, $entry, false);    
+        if ($configuration_data['decision_newImages'] == 'ja'):
+        // delete the Post Attachements, if Images are beeing new set by the user
+            custom_deletePostAttachement($new_post);
+
+            /* Call the function from wpplugin.domi-vernissage-createPostswithGravity */
+            // the fourth parameter is to define wheter the image should be set as titelbild
+            custom_create_Post_attachment($entry_titelbild, $new_post, $entry, true);
+            custom_create_Post_attachment($entry_more_images, $new_post, $entry, false);
+        endif;    
+    endif;        
 
     /* #### Post Status ### */    
     $new_post->post_status = $configuration_data['INSERATE_AFTER_BEARBEITEN_STATUS'];
