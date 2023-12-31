@@ -8,8 +8,12 @@ function edit_inserat_populate_fields( $value, $field, $name  ) {
     global $post;
 
     /* get Postmeta */
+
+    
+
     $post_meta = get_post_meta($post->ID);
-    if (isset($post_meta['insertion_description'][0]) && !empty($post_meta['insertion_description'][0])):
+    
+    if (isset($post_meta['insertion_description']) && !empty($post_meta['insertion_description'])):
         $insertion_desc = $post_meta['insertion_description'][0];
     else:
         $insertion_desc = '';
@@ -21,7 +25,7 @@ function edit_inserat_populate_fields( $value, $field, $name  ) {
         $insertion_color = '';
     endif; 
 
-    if (isset($post_meta['insertion_secondary_color'][0]) && !empty($post_meta['insertion_secondary_color'][0])):
+    if (isset($post_meta['insertion_secondary_color']) && !empty($post_meta['insertion_secondary_color'])):
         $insertion_secondary_color = $post_meta['insertion_secondary_color'][0];
     else:
         $insertion_secondary_color = '';    
@@ -50,7 +54,6 @@ function edit_inserat_populate_fields( $value, $field, $name  ) {
     else:
         $insertion_price = '';    
     endif; 
-    
 
 
     
@@ -59,17 +62,12 @@ function edit_inserat_populate_fields( $value, $field, $name  ) {
     $values = array(
         'edit_inserattitel'   => $post->post_title,
         'edit_inseratbeschreibung'   => $insertion_desc,
-        'edit_format' => 'value three',
-        'edit_technik'   => 'value one',
-        'edit_malgrund' => 'value three',
         'edit_dominanteFarbe'   => $insertion_color,
         'edit_begleitFarbe' => $insertion_secondary_color,
         'edit_breite'   => $insertion_width,
         'edit_hoehe'   => $insertion_height,
         'edit_logistik' => $insertion_logistics,
-        'edit_mehrteilig'   => 'value two',
         'edit_price' => $insertion_price,
-        'edit_additional_Images'   => 'value one',
     );
  
     return isset( $values[ $name ] ) ? $values[ $name ] : $value;}

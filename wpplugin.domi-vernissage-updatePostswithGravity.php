@@ -26,6 +26,9 @@ add_action( 'wp_enqueue_scripts', 'domi_custom_customcss');
 
 
 /* INCLUDE FILES */
+include $plugin_url . '/includes/gformConfiguration.php';
+include $plugin_url . '/includes/gformMappingTestumgebung.php';
+include $plugin_url . '/includes/gformMappingProduktivumgebung.php';
 include $plugin_url . '/includes/gform_populate_custom_fields.php';
 include $plugin_url . '/includes/gform_populate_technik_term.php';
 include $plugin_url . '/includes/gform_populate_stile_term.php';
@@ -35,8 +38,6 @@ include $plugin_url . '/includes/gform_populate_malgrund_term.php';
 include $plugin_url . '/includes/gform_after_submission.php';
 include $plugin_url . '/includes/gform_disable_post_creation.php';
 include $plugin_url . '/includes/customFunctions.php';
-include $plugin_url . '/includes/gformConfiguration.php';
-
 
 
 ?>

@@ -19,3 +19,8 @@ In Version 1, additional Images were Uploaded via PostMeta insertion_images.
 In Verstion 2, additional Immages where uploaded as Post-Attachement. That allows better manaagement of the images via Media Gallery.
 
 When additional Images are beeing changed, the old  Images are being deleted and only the newly Images are visible. But this only counts for Post attachements. Additional Images uploaded in Version 1 are still visible.
+
+# Configuration Possibilities (Staging)
+The Gform Mapping can be done for both Test- and Produktivumgebung. 
+- gformMappingProduktivumgebung.php
+- gformMappingTestumgebung.php
